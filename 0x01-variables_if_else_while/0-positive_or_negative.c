@@ -4,8 +4,8 @@
 
  /**
  * main -entry point
- * 
- * Descreption: positive or negative
+ *
+ * Descreption: true or false validation
  *
  * Return : 0 (success)
  */
