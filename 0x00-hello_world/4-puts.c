@@ -1,12 +1,9 @@
 #include <stdio.h>
 
 /**
- *main -Entry point
+ * main - Entry point
  *
- *Descreption : A C PROGRAMMING LANGUAGE 
- *
- *Return : ALWAYS 0 (SUCCESS)
- *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
