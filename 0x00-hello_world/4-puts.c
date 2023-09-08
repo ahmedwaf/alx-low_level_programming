@@ -1,5 +1,14 @@
 #include <stdio.h>
-int main(void) {
+/**
+ *main -Entry point
+ *
+ *Descreption : A C PROGRAMMING LANGUAGE 
+ *
+ *Return : ALWAYS 0 (SUCCESS)
+ *
+*/  
+int main(void)
+{
 puts("\"Programming is like building a multilingual puzzle\n");
 return 0;
 }
