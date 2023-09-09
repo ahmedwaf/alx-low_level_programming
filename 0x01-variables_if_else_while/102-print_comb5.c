@@ -9,31 +9,27 @@
  */
 int main(void)
 {
-	int tens1, ones1, tens2, ones2;
+		int num1, num2;
 
-		for (tens1 = 0; tens1 <= 9; tens1++)
-		{
-		for (ones1 = 0; ones1 <= 9; ones1++)
-		{
-		for (tens2 = tens1; tens2 <= 9; tens2++)
-		{
-		for (ones2 = ones1 + 1; ones2 <= 9; ones2++)
-		{
-			putchar(tens1 + '0');
-			putchar(ones1 + '0');
-			putchar(' ');
-			putchar(tens2 + '0');
-			putchar(ones2 + '0');
+	for (num1 = 0; num1 <= 99; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+	{
+		putchar((num1 / 10) + '0');
+		putchar((num1 % 10) + '0');
+		putchar(' ');
+		putchar((num2 / 10) + '0');
+		putchar((num2 % 10) + '0');
 
-		if (!(tens1 == 9 && ones1 == 8 && tens2 == 9 && ones2 == 9))
+		if (num1 != 98 || num2 != 99)
 		{
 		putchar(',');
 		putchar(' ');
 					}
 				}
-			}
+		num2++;
 		}
-	}
+	num1++;
 
 	putchar('\n');
 
