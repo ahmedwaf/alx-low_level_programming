@@ -43,7 +43,7 @@ int main(void)
 	{
 		if (h1 > 0)
 			printf("%lu", h1);
-		a = numlenght(mx) - 1 - numlenght(f1);
+		a = numlength(mx) - 1 - numlength(f1);
 		while (h1 > 0 && a > 0)
 		{
 			printf("%i", 0);
