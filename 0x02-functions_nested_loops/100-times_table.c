@@ -14,7 +14,8 @@ void print_times_table(int n)
 {
 	return;
 	}
-	int row, column, product;
+	int row, column;
+	int product;
 
 	for (row = 0; row <= n; row++)
 {
