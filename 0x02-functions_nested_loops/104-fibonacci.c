@@ -11,26 +11,19 @@
  */
 int main(void)
 {
-	unsigned long fib1 = 1, fib2 = 2, sum;
-	int count;
-
-	printf("%lu, %lu, ", fib1, fib2);
-
-	for (count = 3; count <= 98; count++)
+	int i;
+	unsigned long fib[100]; // Use an array to store Fibonacci numbers
+	fib[0] = 1;
+	fib[1] = 2;
+	for (i = 2; i < 100; i++)
 	{
-	sum = fib1 + fib2;
-	fib1 = fib2;
-	fib2 = sum;
-
-	if (count < 98)
+	fib[i] = fib[i - 1] + fib[i - 2];
+	}
+	for (i = 0; i < 98; i++)
 	{
-	printf("%lu, ", sum);
+	printf("%lu, ", fib[i]);
 	}
-	else
-	{
-	printf("%lu\n", sum);
-	}
-	}
+	printf("%lu\n", fib[98]);
 
 	return (0);
 }
