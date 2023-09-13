@@ -1,27 +1,27 @@
 #include <stdio.h>
+
+
 /**
- * print_last_digit - Prints the last digit of a number.
- * @n: The integer number.
- *
- * Return: The value of the last digit.
- */
+  * main - the main printing funtion
+  * less than 4000000.
+  * Return: 0.
+  */
+
+
 int main(void)
 {
-	int first = 1, second = 2, next, sum = 0;
+	int i = 0;
+	long j = 1, k = 2, sum = k;
 
-	while (second <= 4000000)
+
+	while (k + j < 4000000)
 	{
-	if (second % 2 == 0)
-	{
-		sum += second;
+		k += j;
+		if (k % 2 == 0)
+		sum += k;
+		j = k - j;
+		++i;
 	}
-
-	next = first + second;
-	first = second;
-	second = next;
-	}
-
-	printf("Sum of even-valued terms in the Fibonacci sequence below 4,000,000: %d\n", sum);
-
-	return 0;
+	printf("%ld", sum);
+	return (0);
 }
