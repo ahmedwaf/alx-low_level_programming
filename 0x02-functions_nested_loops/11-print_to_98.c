@@ -14,15 +14,17 @@ if (n <= 98)
 		printf("%d", n);
 	if (n != 9)
 		printf(", ");
+		n++;
 	}
 	}
 	else
 	{
-	for (; n >= 98; n--)
+	while (n >= 98)
 	{
-		printf("%d", n);
+	printf("%d", n);
 	if (n != 98)
-		printf(", ");
+	printf(", ");
+	n--;
 	}
 	}
 	printf("\n");
