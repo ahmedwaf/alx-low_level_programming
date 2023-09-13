@@ -12,8 +12,11 @@
 int main(void)
 {
 	int i;
-	unsigned long fib[100]; // Use an array to store Fibonacci numbers
+
+	unsigned long fib[100];
+
 	fib[0] = 1;
+
 	fib[1] = 2;
 	for (i = 2; i < 100; i++)
 	{
