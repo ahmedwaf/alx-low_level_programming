@@ -1,6 +1,30 @@
 #include <stdio.h>
 #include "main.h"
 /**
+ * numlength - Calculate the number of digits in an integer.
+ * @num: The integer for which to determine the number of digits.
+ *
+ * Return: The number of digits in the integer 'num'.
+ */
+int numlength(int num)
+{
+	int length = 0;
+
+	if (!num)
+	{
+	return (1);
+	}
+
+	while (num)
+	{
+	num = num / 10;
+	length += 1;
+	}
+
+	return (length);
+}
+
+/**
  * main - Prints the first 98 Fibonacci numbers.
  *
  * Description: This program calculates and prints the first 98 Fibonacci
