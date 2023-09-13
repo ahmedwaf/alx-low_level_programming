@@ -19,36 +19,34 @@ void print_times_table(int n)
 
 	for (row = 0; row <= n; row++)
 {
-		for (column = 0; column <= n; column++)
-		{
+	for (column = 0; column <= n; column++)
+		
 		product = row * column;
 
-		if (column != 0) {
+	if (col != 0)
+		_putchar(' ');
+
+	if (product < 10) {
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(product + '0');
+	}
+	else if (product < 100) {
+		_putchar(' ');
+		_putchar((product / 10) + '0');
+		_putchar((product % 10) + '0');
+	}
+	else
+	{
+		_putchar((product / 100) + '0');
+		_putchar(((product / 10) % 10) + '0');
+		_putchar((product % 10) + '0');
+		}
+
+	if (col < n)
 		_putchar(',');
-		_putchar(' ');
-
-		if (product < 10)
-		{
-		_putchar(' ');
-		}
-		}
-
-		if (product < 10)
-		{
-		_putchar(' ');
-		_putchar('0' + product);
-		{
-		else if (product >= 10 && product < 100) {
-		_putchar('0' + product / 10);
-		_putchar('0' + product % 10);
-		}
-		else
-		{
-		_putchar('0' + product / 100);
-		_putchar('0' + (product % 100) / 10);
-		_putchar('0' + product % 10);
-		}
-		}
+	else
 		_putchar('\n');
+		}
 	}
 }
