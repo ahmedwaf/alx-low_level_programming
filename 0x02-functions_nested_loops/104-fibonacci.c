@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <limits.h>
 /**
  * numlength - Calculate the number of digits in an integer.
  * @num: The integer for which to determine the number of digits.
