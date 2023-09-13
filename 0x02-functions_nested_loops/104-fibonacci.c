@@ -60,7 +60,7 @@ int main(void)
 	if (fib2_half2 + fib2_half2 > 9999999999)
 	{
 	half1 += 1;
-	half2 %= 10000000000;
+	half2 %= 100000000;
 	}
 	printf("%lu%lu", half1, half2);
 	if (count != 98)
@@ -70,6 +70,6 @@ int main(void)
 	fib2_half1 = half1;
 	fib2_half2 = half2;
 	}
-	
+	printf("\n");
 	return (0);
 }
