@@ -1,0 +1,2 @@
+#!/bin/bash
+git add . && git commit -m "5 task of C " && git push
