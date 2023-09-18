@@ -1,18 +1,15 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * puts2 - Prints every other character of a string.
  * @str: The string to be printed.
  */
-void puts2(char *str)
+int main(void)
 {
-	int i = 0;
+	char str[] = "Hello, World!";
 
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i += 2;
-	}
+	printf("Original string: %s\n", str);
+	puts2(str);
 
-	_putchar('\n');
+	return (0);
 }
