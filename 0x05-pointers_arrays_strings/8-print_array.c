@@ -8,15 +8,25 @@
  */
 void print_array(int *a, int n)
 {
-	int i;
+	for (int i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
 
-	for (i = 0; i < (n - 1); i++)
-	{
-		printf("%d, ", a[i]);
+		if (i < n - 1)
+		{
+			printf(", ");
+		}
 	}
-	if (i == (n - 1))
-	{
-		printf("%d", a[n - 1]);
-	}
+
 	printf("\n");
+}
+
+int main()
+{
+	int arr[] = {1, 2, 3, 4, 5};
+	int n = sizeof(arr) / sizeof(arr[0]);
+
+	print_array(arr, n);
+
+	return 0;
 }
