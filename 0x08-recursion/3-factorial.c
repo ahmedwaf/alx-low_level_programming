@@ -13,8 +13,4 @@ int factorial(int n)
 		return (-1);
 	}
 	return (n * factorial(n - 1));
-	int main(void)
-	{
-		int n;
-
-		printf("%d\n", factorial(n));
+}
