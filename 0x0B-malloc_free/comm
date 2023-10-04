@@ -1,0 +1,2 @@
+#!/bin/bash
+git add . && git commit -m "task 0x0B malloc and free" && git push
