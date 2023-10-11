@@ -8,13 +8,9 @@
  **/
 void print_name(char *name, void (*f)(char *))
 {
-	printf("name : %s",name);
+	if (f == NULL || name == NULL)
+		return;
 
-}
-int main()
-{
-
-	char *name = "hello";
-	print_name(name, printf);
+	f(name);
 
 }
