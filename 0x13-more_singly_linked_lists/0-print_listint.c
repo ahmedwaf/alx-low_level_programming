@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * print_listint - prints the linked list
- * @h: head of the list of elements
+ * @head: head of the list of elements
  * Return: returns the count
  */
 
@@ -13,7 +13,7 @@ size_t print_listint(const listint_t *head)
 	while (current != 0)
 	{
 		printf("%d\n", current->n);
-		count++;
+		icount++;
 		current = current->next;
 	}
 	return (count);
