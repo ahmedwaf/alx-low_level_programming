@@ -1,37 +1,36 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * find_listint_loop - finds the loop like tortie and hare
  * @head: points to the header of a linked list
  * Return: returns the adddress where the loop starts or null
  */
-
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *tortie, *hare;
+	listint_t *tortoise, *hare;
 
-	if (head == NULL || head->next == NULL)
+	if (head == NULL)
 		return (NULL);
 
-	tortie = head->next;
-	hare = head->next->next;
+	tortoise = head;
+	hare = head;
 
-	while (hare)
+	while (hare != NULL && hare->next != NULL)
 	{
-		if (tortie == hare)
-		{
-			tortie = head;
+		tortoise = tortoise->next;
+		hare = hare->next->next;
 
-			while (tortie != hare)
+		if (tortoise == hare)
+		{
+			tortoise = head;
+			while (tortoise != hare)
 			{
-				tortie = tortie->next;
+				tortoise = tortoise->next;
 				hare = hare->next;
 			}
-			return (tortie);
+			return (tortoise);
 		}
-		tortie = tortie->next;
-		hare = hare->next->next;
 	}
+
 	return (NULL);
-}
 }
