@@ -5,9 +5,8 @@
  * @head: is the pointer to the head of the linked list
  * @idx: the node is added after idx
  * @n: value added
- * Retu: if function fails - NULL otherwise new node
+ * Return: if function fails - NULL otherwise new node
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *new;
