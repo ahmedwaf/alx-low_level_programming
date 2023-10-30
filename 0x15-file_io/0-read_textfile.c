@@ -10,20 +10,23 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	int file_descriptor;
+	char *buffer;
+	ssize_t bytes_reader, file_write;
+
 	if (filename == NULL)
 		return (0);
-	int file_descriptor = open(filename, O_RDONLY);
+	file_descriptor = open(filename, O_RDONLY);
 
 	if (file_descriptor == -1)
 		return (0);
-	char *buffer = malloc(letters);
-
+	buffer = malloc(letters);
 	if (buffer == NULL)
 	{
 		close(file_descriptor);
 		return (0);
 	}
-	ssize_t bytes_reader = read(file_descriptor, buffer, letters);
+	bytes_reader = read(file_descriptor, buffer, letters);
 
 	if (bytes_reader == -1)
 	{
@@ -31,7 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	ssize_t file_write = write(STDOUT_FILENO, buffer, bytes_reader);
+	file_write = write(STDOUT_FILENO, buffer, bytes_reader);
 
 	if (file_write == -1 || file_write != bytes_reader)
 	{
